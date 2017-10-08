@@ -50,4 +50,7 @@
   <ItemGroup>
     <Folder Include="$(MSBuildThisFileDirectory)Converters\" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="$(MSBuildThisFileDirectory)Resources\QueenAnne_FoodBank.png" />
+  </ItemGroup>
 </Project>
