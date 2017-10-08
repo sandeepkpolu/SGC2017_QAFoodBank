@@ -196,6 +196,7 @@
     <AndroidResource Include="Resources\drawable\tweet.png" />
     <AndroidResource Include="Resources\drawable\facebook.png" />
     <AndroidResource Include="Resources\drawable\cartwheel.png" />
+    <AndroidResource Include="Resources\drawable\QueenAnne_FoodBank.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\drawable-hdpi\" />

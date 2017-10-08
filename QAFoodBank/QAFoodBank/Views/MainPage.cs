@@ -41,13 +41,13 @@ namespace QAFoodBank
             Children.Add(itemsPage);
             Children.Add(aboutPage);
 
-            Title = Children[0].Title;
+            Title = "Fill the Bowl";
         }
 
         protected override void OnCurrentPageChanged()
         {
             base.OnCurrentPageChanged();
-            Title = CurrentPage?.Title ?? string.Empty;
+            Title = "Fill the Bowl";
         }
     }
 }

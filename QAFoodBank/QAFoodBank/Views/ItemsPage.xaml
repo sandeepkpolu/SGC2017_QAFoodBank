@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="QAFoodBank.ItemsPage" Title="{Binding Title}" x:Name="BrowseItemsPage">
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="QAFoodBank.ItemsPage" Title="Fill the Bowl" x:Name="BrowseItemsPage">
     <ContentPage.ToolbarItems>
-        <ToolbarItem Text="Add" Clicked="AddItem_Clicked" />
+        
     </ContentPage.ToolbarItems>
     <ContentPage.Content>
         <StackLayout>
@@ -11,8 +11,8 @@
                         <ViewCell>
                             <StackLayout BackgroundColor="{Binding Urgent, Converter={StaticResource BooleanToColorConverter}}" Orientation="Vertical">
                                 <StackLayout Orientation="Horizontal">
-                                    <Image Source="{Binding Picture}" />
-                                    <Label Text="{Binding Name}" TextColor="Black" Margin="20" />
+                                    <Image Source="{Binding Picture}" WidthRequest="50" HeightRequest="50" Margin="10" />
+                                    <Label Text="{Binding ItemName}" TextColor="Black" Margin="20" />
                                 </StackLayout>
                             </StackLayout>
                         </ViewCell>
