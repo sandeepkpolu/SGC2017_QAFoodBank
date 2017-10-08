@@ -15,9 +15,7 @@ namespace QAFoodBank.MobileAPI
 
             GlobalConfiguration.Configuration
                 .EnableSwagger(c =>
-                        c.SingleApiVersion("v1", "QAFoodBank.MobileAPI");
-
-                    })
+                        c.SingleApiVersion("v1", "QAFoodBank.MobileAPI"))
                 .EnableSwaggerUi(c =>
                     {
                     });
