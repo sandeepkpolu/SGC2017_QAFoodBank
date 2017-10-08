@@ -6,6 +6,12 @@ namespace QAFoodBank
 {
     public partial class ItemDetailPage : ContentPage
     {
+        void Handle_Clicked(object sender, System.EventArgs e)
+        {
+            Button btn = (Button)sender;
+            Device.OpenUri(new Uri((string)btn.CommandParameter));
+        }
+
         ItemDetailViewModel viewModel;
 
         // Note - The Xamarin.Forms Previewer requires a default, parameterless constructor to render a page.
@@ -29,5 +35,6 @@ namespace QAFoodBank
 
             BindingContext = this.viewModel = viewModel;
         }
+
     }
 }

@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+using QAFoodBank.Models;
 
 namespace QAFoodBank
 {
@@ -8,10 +10,8 @@ namespace QAFoodBank
         public string Name { get; set; }
         public string Description { get; set; }
         public ItemCategory Category { get; set; }
-        public string Quantity { get; set; }
-        public ItemPriority Priority { get; set; }
         public string Picture { get; set; }
-        public string Query { get; set; }
-        public string CompanyId { get; set; }
+        public bool Urgent { get; set; }
+        public List<Vendor> SourceUrls { get; set; }
     }
 }

@@ -19,7 +19,7 @@ namespace QAFoodBank
 
         async void OnItemSelected(object sender, SelectedItemChangedEventArgs args)
         {
-            var item = args.SelectedItem as Item;
+            var item = args.SelectedItem as Item;      
             if (item == null)
                 return;
 
