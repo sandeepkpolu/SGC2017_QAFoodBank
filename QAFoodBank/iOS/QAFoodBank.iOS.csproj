@@ -147,6 +147,9 @@
     <BundleResource Include="Resources\xamarin_logo%402x.png" />
     <BundleResource Include="Resources\xamarin_logo%403x.png" />
     <BundleResource Include="Resources\food_icon.png" />
+    <BundleResource Include="Resources\tweet.png" />
+    <BundleResource Include="Resources\facebook.png" />
+    <BundleResource Include="Resources\cartwheel.png" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AppDelegate.cs" />
