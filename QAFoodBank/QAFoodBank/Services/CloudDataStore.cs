@@ -24,10 +24,17 @@ namespace QAFoodBank
 
         public async Task<IEnumerable<Item>> GetItemsAsync(bool forceRefresh = false)
         {
-            if (forceRefresh && CrossConnectivity.Current.IsConnected)
+            try
             {
-                var json = await client.GetStringAsync($"api/items");
-                items = await Task.Run(() => JsonConvert.DeserializeObject<IEnumerable<Item>>(json));
+                if (forceRefresh && CrossConnectivity.Current.IsConnected)
+                {
+                    var json = await client.GetStringAsync($"api/items");
+                    items = await Task.Run(() => JsonConvert.DeserializeObject<IEnumerable<Item>>(json));
+                }
+            }
+            catch (Exception ex)
+            {
+                items = new List<Item>();
             }
 
             return items;

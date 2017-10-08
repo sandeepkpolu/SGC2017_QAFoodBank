@@ -17,10 +17,11 @@ namespace QAFoodBank
             var mockItems = new List<Item>
             {
                 new Item {
-                    Id = Guid.NewGuid().ToString(),
-                    Name = "Chicken soup",
+                    ItemId = 1,
+                    ItemName = "Chicken soup",
                     Description ="Any chicken soup, small cans.",
-                    Category = ItemCategory.Food,
+                    CategoryName = ItemCategory.Food.ToString(),
+                    CategoryId = ItemCategory.Food.GetHashCode(),
                     Picture = "food_icon.png",
                     Urgent = false,
                     SourceUrls = new List<Models.Vendor>() {
@@ -36,10 +37,11 @@ namespace QAFoodBank
 
                 },
                 new Item {
-                    Id = Guid.NewGuid().ToString(),
-                    Name = "Chili & Beans",
+                    ItemId = 2,
+                    ItemName = "Chili & Beans",
                     Description ="Any chili, small cans.",
-                    Category = ItemCategory.Food,
+                    CategoryName = ItemCategory.Clothes.ToString(),
+                    CategoryId = ItemCategory.Clothes.GetHashCode(),
                     Picture = "food_icon.png",
 					Urgent = true,
 					SourceUrls = new List<Models.Vendor>() {
@@ -54,10 +56,11 @@ namespace QAFoodBank
 					}
                 },
                 new Item {
-                    Id = Guid.NewGuid().ToString(),
-                    Name = "Green beans",
+                    ItemId = 3,
+                    ItemName = "Green beans",
                     Description ="Any green beans, small cans.",
-                    Category = ItemCategory.Food,
+                    CategoryName = ItemCategory.Food.ToString(),
+                    CategoryId = ItemCategory.Food.GetHashCode(),
                     Picture = "food_icon.png",
                     Urgent = false,
 					SourceUrls = new List<Models.Vendor>() {

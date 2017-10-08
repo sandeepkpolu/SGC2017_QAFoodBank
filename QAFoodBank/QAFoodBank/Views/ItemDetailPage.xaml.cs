@@ -21,7 +21,7 @@ namespace QAFoodBank
 
             var item = new Item
             {
-                Name = "Item 1",
+                ItemName = "Item 1",
                 Description = "This is an item description."
             };
 

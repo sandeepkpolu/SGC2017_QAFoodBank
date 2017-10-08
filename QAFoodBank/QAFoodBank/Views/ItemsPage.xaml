@@ -13,7 +13,7 @@
                         Orientation="Vertical">
                             <StackLayout Orientation="Horizontal">
                                 <Image Source="{Binding Picture}" />
-                                <Label Text="{Binding Name}"
+                                <Label Text="{Binding ItemName}"
                                 TextColor="Black" Margin="20"/>
                             </StackLayout>
                         </StackLayout>
