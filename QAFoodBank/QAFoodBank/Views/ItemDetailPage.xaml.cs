@@ -14,10 +14,8 @@ namespace QAFoodBank
 
         public void Provider_Clicked(object sender, System.EventArgs e)
         {
-
             Button btn = (Button)sender;
             Device.OpenUri(new Uri((string)btn.CommandParameter));
-
         }
 
         ItemDetailViewModel viewModel;

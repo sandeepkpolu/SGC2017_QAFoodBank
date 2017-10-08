@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "289158769399",
+    "firebase_url": "https://qafoodbank.firebaseio.com",
+    "project_id": "qafoodbank",
+    "storage_bucket": "qafoodbank.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:289158769399:android:e45b75e2d8551f99",
+        "android_client_info": {
+          "package_name": "com.qafoodbank"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "289158769399-mu02504fuoobnstebl0fqq88k300ddid.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.qafoodbank",
+            "certificate_hash": "692c5d417679f36e5bcf7f34259b991d656ea034"
+          }
+        },
+        {
+          "client_id": "289158769399-04mmnhqaiv8rb2m3poud2q5m91gg92sc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDlFs6hdKRIQnVoooAXAOi3V-yZpQFpDqM"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "289158769399-04mmnhqaiv8rb2m3poud2q5m91gg92sc.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

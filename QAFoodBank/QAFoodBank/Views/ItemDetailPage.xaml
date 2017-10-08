@@ -2,7 +2,7 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="QAFoodBank.ItemDetailPage" Title="{Binding Title}">
     <StackLayout Spacing="20" Padding="15">
         <Image Source="{Binding Item.Picture}" HeightRequest="200" WidthRequest="200" />
-        <Label Text="{Binding Item.Name}" FontSize="Medium" />
+        <Label Text="{Binding Item.ItemName}" FontSize="Medium" />
         <Label Text="{Binding Item.Description}" FontSize="Small" />
         <ListView x:Name="ItemsListView" ItemsSource="{Binding Item.SourceUrls}" VerticalOptions="FillAndExpand" HasUnevenRows="true">
             <ListView.ItemTemplate>

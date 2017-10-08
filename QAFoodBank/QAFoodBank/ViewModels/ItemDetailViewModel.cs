@@ -9,7 +9,7 @@ namespace QAFoodBank
 
         public ItemDetailViewModel(Item item = null)
         {
-            Title = item?.Name;
+            Title = item?.ItemName;
             Item = item;
         }
 

@@ -7,6 +7,7 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using Android.OS;
+using Microsoft.Azure.Mobile.Push;
 
 namespace QAFoodBank.Droid
 {
@@ -29,5 +30,11 @@ namespace QAFoodBank.Droid
         {
             base.OnActivityResult(requestCode, resultCode, data);
         }
+
+        protected override void OnNewIntent(Android.Content.Intent intent)
+		{
+			base.OnNewIntent(intent);
+			Push.CheckLaunchedFromNotification(this, intent);
+		}
     }
 }
