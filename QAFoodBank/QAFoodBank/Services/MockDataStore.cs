@@ -22,7 +22,7 @@ namespace QAFoodBank
                     Description ="Any soup, small bottles.",
                     Category = ItemCategory.Food,
                     CompanyId = company.Id,
-                    Picture = "",
+                    Picture = "food_icon.png",
                     Quantity ="10 lbs",
                     Query = "soup",
                     Priority = ItemPriority.Critical                    
@@ -33,7 +33,7 @@ namespace QAFoodBank
                     Description ="Any chilli, small bottles.",
                     Category = ItemCategory.Food,
                     CompanyId = company.Id,
-                    Picture = "",
+                    Picture = "food_icon.png",
                     Quantity ="10 lbs",
                     Query = "chilli",
                     Priority = ItemPriority.Critical
@@ -44,7 +44,7 @@ namespace QAFoodBank
                     Description ="Any canned veggies, small bottles.",
                     Category = ItemCategory.Food,
                     CompanyId = company.Id,
-                    Picture = "",
+                    Picture = "food_icon.png",
                     Quantity ="10 lbs",
                     Query = "canned veggies",
                     Priority = ItemPriority.Critical
