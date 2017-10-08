@@ -14,6 +14,7 @@
         <AssociationConnector Association="QAFB_DBModel.FK_ItemPriority_Item" ManuallyRouted="false" />
         <AssociationConnector Association="QAFB_DBModel.FK_ItemSource_ItemSource" ManuallyRouted="false" />
         <AssociationConnector Association="QAFB_DBModel.FK_ItemSource_ItemVendor" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="QAFB_DBModel.AppSettng" Width="1.5" PointX="5.375" PointY="0.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

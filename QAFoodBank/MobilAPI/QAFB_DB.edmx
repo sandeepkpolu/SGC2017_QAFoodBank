@@ -5,6 +5,14 @@
     <!-- SSDL content -->
     <edmx:StorageModels>
     <Schema Namespace="QAFB_DBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012.Azure" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="AppSettng">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ItemKey" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="ItemValue" Type="nvarchar" MaxLength="1000" Nullable="false" />
+        </EntityType>
         <EntityType Name="Item">
           <Key>
             <PropertyRef Name="Id" />
@@ -100,6 +108,7 @@
         </Function>
         <Function Name="GetListOfItems" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
         <EntityContainer Name="QAFB_DBModelStoreContainer">
+          <EntitySet Name="AppSettng" EntityType="Self.AppSettng" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Item" EntityType="Self.Item" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="ItemCategory" EntityType="Self.ItemCategory" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="ItemPriority" EntityType="Self.ItemPriority" Schema="dbo" store:Type="Tables" />
@@ -247,9 +256,10 @@
             <End Role="ItemSource" EntitySet="ItemSources" />
           </AssociationSet>
           <FunctionImport Name="GetItemSources" ReturnType="Collection(QAFB_DBModel.GetItemSources_Result)">
-            <Parameter Name="itemId" Mode="In" Type="Int32" />
+          <Parameter Name="itemId" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="GetListOfItems" ReturnType="Collection(QAFB_DBModel.GetListOfItems_Result)" />
+          <EntitySet Name="AppSettngs" EntityType="QAFB_DBModel.AppSettng" />
         </EntityContainer>
         <ComplexType Name="GetItemSources_Result">
           <Property Type="String" Name="Name" Nullable="true" MaxLength="50" />
@@ -264,6 +274,14 @@
           <Property Type="String" Name="CategoryName" Nullable="true" MaxLength="50" />
           <Property Type="Boolean" Name="Urgent" Nullable="true" />
         </ComplexType>
+        <EntityType Name="AppSettng">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ItemKey" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ItemValue" Type="String" Nullable="false" MaxLength="1000" FixedLength="false" Unicode="true" />
+        </EntityType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -338,6 +356,15 @@
               </ComplexTypeMapping>
             </ResultMapping>
           </FunctionImportMapping>
+          <EntitySetMapping Name="AppSettngs">
+            <EntityTypeMapping TypeName="QAFB_DBModel.AppSettng">
+              <MappingFragment StoreEntitySet="AppSettng">
+                <ScalarProperty Name="ItemValue" ColumnName="ItemValue" />
+                <ScalarProperty Name="ItemKey" ColumnName="ItemKey" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>
