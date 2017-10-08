@@ -10,7 +10,11 @@ namespace QAFoodBank.Converters
         {
             var converter = new ColorTypeConverter();
 			if ((value is Boolean && (Boolean)value == true) || (value is Boolean? && (Boolean?)value == true))
+<<<<<<< HEAD
                 return Xamarin.Forms.Color.Orange;
+=======
+                return Xamarin.Forms.Color.LightBlue;
+>>>>>>> cb604b2feefe91e0f2e7de98f175de3e81e49cdf
             
             return Xamarin.Forms.Color.White;
         }

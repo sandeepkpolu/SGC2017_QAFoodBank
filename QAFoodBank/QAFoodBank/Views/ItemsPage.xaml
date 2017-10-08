@@ -12,7 +12,11 @@
                             <StackLayout BackgroundColor="{Binding Urgent, Converter={StaticResource BooleanToColorConverter}}" Orientation="Vertical">
                                 <StackLayout Orientation="Horizontal">
                                     <Image Source="{Binding Picture}" WidthRequest="50" HeightRequest="50" Margin="10" />
+<<<<<<< HEAD
                                     <Label Text="{Binding ItemName}" TextColor="Black" FontSize="20" Margin="20" />
+=======
+                                    <Label Text="{Binding ItemName}" TextColor="Black" Margin="20" />
+>>>>>>> cb604b2feefe91e0f2e7de98f175de3e81e49cdf
                                 </StackLayout>
                             </StackLayout>
                         </ViewCell>
