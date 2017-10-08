@@ -158,6 +158,7 @@
     <BundleResource Include="Resources\tweet.png" />
     <BundleResource Include="Resources\facebook.png" />
     <BundleResource Include="Resources\cartwheel.png" />
+    <BundleResource Include="Resources\QueenAnne_FoodBank.png" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AppDelegate.cs" />
