@@ -32,6 +32,7 @@ namespace QAFoodBank.MobileAPI
         public virtual DbSet<ItemPriority> ItemPriorities { get; set; }
         public virtual DbSet<ItemSource> ItemSources { get; set; }
         public virtual DbSet<ItemVendor> ItemVendors { get; set; }
+        public virtual DbSet<AppSettng> AppSettngs { get; set; }
     
         public virtual ObjectResult<GetItemSources_Result> GetItemSources(Nullable<int> itemId)
         {
