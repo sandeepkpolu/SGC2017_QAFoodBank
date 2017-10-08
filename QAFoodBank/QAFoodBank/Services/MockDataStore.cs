@@ -18,36 +18,58 @@ namespace QAFoodBank
             {
                 new Item {
                     Id = Guid.NewGuid().ToString(),
-                    Name = "Soup",
-                    Description ="Any soup, small bottles.",
+                    Name = "Chicken soup",
+                    Description ="Any chicken soup, small cans.",
                     Category = ItemCategory.Food,
-                    CompanyId = company.Id,
                     Picture = "food_icon.png",
-                    Quantity ="10 lbs",
-                    Query = "soup",
-                    Priority = ItemPriority.Critical                    
+                    Urgent = false,
+                    SourceUrls = new List<Models.Vendor>() {
+                        new Models.Vendor() {
+                            Name = "Amazon",
+                            Url = "https://www.amazon.com/s/ref=nb_sb_noss_1?url=search-alias%3Daps&field-keywords=chicken+soup+cans"
+                        },
+						new Models.Vendor() {
+							Name = "Target",
+							Url = "https://www.target.com/s?searchTerm=chicken+soup"
+						}
+                    }
+
                 },
                 new Item {
                     Id = Guid.NewGuid().ToString(),
-                    Name = "Chillies",
-                    Description ="Any chilli, small bottles.",
+                    Name = "Chili & Beans",
+                    Description ="Any chili, small cans.",
                     Category = ItemCategory.Food,
-                    CompanyId = company.Id,
                     Picture = "food_icon.png",
-                    Quantity ="10 lbs",
-                    Query = "chilli",
-                    Priority = ItemPriority.Critical
+					Urgent = true,
+					SourceUrls = new List<Models.Vendor>() {
+						new Models.Vendor() {
+							Name = "Amazon",
+							Url = "https://www.amazon.com/s/ref=nb_sb_noss?url=search-alias%3Daps&field-keywords=Chili+%26+Beans"
+						},
+						new Models.Vendor() {
+							Name = "Target",
+							Url = "https://www.target.com/s?searchTerm=Chili+%26+Beans"
+						}
+					}
                 },
                 new Item {
                     Id = Guid.NewGuid().ToString(),
-                    Name = "Veggies",
-                    Description ="Any canned veggies, small bottles.",
+                    Name = "Green beans",
+                    Description ="Any green beans, small cans.",
                     Category = ItemCategory.Food,
-                    CompanyId = company.Id,
                     Picture = "food_icon.png",
-                    Quantity ="10 lbs",
-                    Query = "canned veggies",
-                    Priority = ItemPriority.Critical
+                    Urgent = false,
+					SourceUrls = new List<Models.Vendor>() {
+						new Models.Vendor() {
+							Name = "Amazon",
+							Url = "https://www.amazon.com/s/ref=nb_sb_noss_2?url=search-alias%3Daps&field-keywords=green+beans&rh=i%3Aaps%2Ck%3Agreen+beans"
+						},
+						new Models.Vendor() {
+							Name = "Target",
+							Url = "https://www.target.com/s?searchTerm=green+beans"
+						}
+					}
                 }
             };
 

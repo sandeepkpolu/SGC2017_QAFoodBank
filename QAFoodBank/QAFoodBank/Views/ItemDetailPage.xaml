@@ -1,8 +1,18 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="QAFoodBank.ItemDetailPage" Title="{Binding Title}">
-	<StackLayout Spacing="20" Padding="15">
-		<Label Text="{Binding Item.Name}" FontSize="Medium" />
+    <StackLayout Spacing="20" Padding="15">
+        <Image Source="{Binding Item.Picture}" HeightRequest="200" WidthRequest="200" />
+        <Label Text="{Binding Item.Name}" FontSize="Medium" />
         <Label Text="{Binding Item.Description}" FontSize="Small" />
-        <Label Text="{Binding Item.Quantity}" FontSize="Small" />
+        <Button Text="I would like to donate" />
+        <ListView x:Name="ItemsListView" ItemsSource="{Binding Item.SourceUrls}" VerticalOptions="FillAndExpand" HasUnevenRows="true">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Button Text="{Binding Name}" Clicked="Handle_Clicked" CommandParameter="{Binding Url}" />
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
     </StackLayout>
 </ContentPage>
