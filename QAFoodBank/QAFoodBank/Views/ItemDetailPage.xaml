@@ -4,12 +4,18 @@
         <Image Source="{Binding Item.Picture}" HeightRequest="200" WidthRequest="200" />
         <Label Text="{Binding Item.ItemName}" FontSize="Medium" />
         <Label Text="{Binding Item.Description}" FontSize="Small" />
-        <Button Text="I would like to donate" />
         <ListView x:Name="ItemsListView" ItemsSource="{Binding Item.SourceUrls}" VerticalOptions="FillAndExpand" HasUnevenRows="true">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
-                        <Button Text="{Binding Name}" Clicked="Handle_Clicked" CommandParameter="{Binding Url}" />
+                        <StackLayout Grid.Row="1" Orientation="Horizontal" VerticalOptions="Center" HorizontalOptions="Center">
+                            <Image Source="cartwheel.png" WidthRequest="50" HeightRequest="50">
+                                <Image.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="Handle_Tapped" CommandParameter="{Binding Url}" />
+                                </Image.GestureRecognizers>
+                            </Image>
+                            <Button Text="{Binding Name}" Clicked="Provider_Clicked" CommandParameter="{Binding Url}" BackgroundColor="Transparent"/>
+                        </StackLayout>
                     </ViewCell>
                 </DataTemplate>
             </ListView.ItemTemplate>

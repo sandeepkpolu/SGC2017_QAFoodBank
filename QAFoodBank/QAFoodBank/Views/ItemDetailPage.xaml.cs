@@ -6,28 +6,19 @@ namespace QAFoodBank
 {
     public partial class ItemDetailPage : ContentPage
     {
-        void Handle_Clicked(object sender, System.EventArgs e)
+        public void Handle_Tapped(object sender, System.EventArgs e)
+        {
+            TappedEventArgs args = (TappedEventArgs)e;
+            Device.OpenUri(new Uri((string)args.Parameter));
+        }
+
+        public void Provider_Clicked(object sender, System.EventArgs e)
         {
             Button btn = (Button)sender;
             Device.OpenUri(new Uri((string)btn.CommandParameter));
         }
 
         ItemDetailViewModel viewModel;
-
-        // Note - The Xamarin.Forms Previewer requires a default, parameterless constructor to render a page.
-        public ItemDetailPage()
-        {
-            InitializeComponent();
-
-            var item = new Item
-            {
-                ItemName = "Item 1",
-                Description = "This is an item description."
-            };
-
-            viewModel = new ItemDetailViewModel(item);
-            BindingContext = viewModel;
-        }
 
         public ItemDetailPage(ItemDetailViewModel viewModel)
         {

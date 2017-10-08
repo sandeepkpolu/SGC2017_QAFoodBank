@@ -8,19 +8,29 @@
             <ListView x:Name="ItemsListView" ItemsSource="{Binding Items}" VerticalOptions="FillAndExpand" HasUnevenRows="true" RefreshCommand="{Binding LoadItemsCommand}" IsPullToRefreshEnabled="true" IsRefreshing="{Binding IsBusy, Mode=OneWay}" CachingStrategy="RecycleElement" ItemSelected="OnItemSelected">
                 <ListView.ItemTemplate>
                     <DataTemplate>
-                          <ViewCell>
-                        <StackLayout BackgroundColor="{Binding Urgent, Converter={StaticResource BooleanToColorConverter}}"
-                        Orientation="Vertical">
-                            <StackLayout Orientation="Horizontal">
-                                <Image Source="{Binding Picture}" />
-                                <Label Text="{Binding ItemName}"
-                                TextColor="Black" Margin="20"/>
+                        <ViewCell>
+                            <StackLayout BackgroundColor="{Binding Urgent, Converter={StaticResource BooleanToColorConverter}}" Orientation="Vertical">
+                                <StackLayout Orientation="Horizontal">
+                                    <Image Source="{Binding Picture}" />
+                                    <Label Text="{Binding Name}" TextColor="Black" Margin="20" />
+                                </StackLayout>
                             </StackLayout>
-                        </StackLayout>
-                    </ViewCell>
+                        </ViewCell>
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>
+            <StackLayout Grid.Row="1" Orientation="Horizontal" VerticalOptions="Center" HorizontalOptions="Center">
+                <Image Source="tweet.png" WidthRequest="50" HeightRequest="50">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="Twitter_Tapped" />
+                    </Image.GestureRecognizers>
+                </Image>
+                <Image Source="facebook.png" WidthRequest="50" HeightRequest="50">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="Facebook_Tapped" />
+                    </Image.GestureRecognizers>
+                </Image>
+            </StackLayout>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
