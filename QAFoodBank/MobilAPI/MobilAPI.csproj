@@ -166,6 +166,7 @@
     <Content Include="QAFB_DB.edmx.diagram">
       <DependentUpon>QAFB_DB.edmx</DependentUpon>
     </Content>
+    <None Include="Properties\PublishProfiles\QAFB-MobilAPI - Web Deploy.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
