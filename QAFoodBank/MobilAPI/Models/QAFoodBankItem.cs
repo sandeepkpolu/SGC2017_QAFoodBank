@@ -15,5 +15,5 @@ namespace QAFoodBank.MobileAPI.Models
         public string CategoryName { get; set; }
         public bool Urgent { get; set; }
         public List<Vendor> SourceUrls { get; set; }
-    }
+	}
 }

@@ -14,7 +14,7 @@ namespace QAFoodBank
 
             Item = new Item
             {
-                Name = "Item name",
+                ItemName = "Item name",
                 Description = "This is an item description."
             };
 
